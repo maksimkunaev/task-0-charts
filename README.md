@@ -1,7 +1,7 @@
 # charts
 
 ## Insatll dependencies
-`npm install`
+`npm i --legacy-peer-deps`
 
 ## To start the project in the development mode
 `npm run start`
