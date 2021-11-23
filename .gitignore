@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.idea
+.cache-loader
+yarn-error.log
+.env
+.idea/workspace.xml
+package-lock.json

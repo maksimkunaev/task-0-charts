@@ -1,0 +1,27 @@
+{
+  "name": "charts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode=production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "copy-webpack-plugin": "^6.4.1",
+    "firebase": "^9.5.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^3.2.3"
+  }
+}

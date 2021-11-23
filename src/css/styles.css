@@ -1,0 +1,346 @@
+body, html  {
+    height: 100%;
+    padding: 0;
+    position: relative;
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.content {
+    flex: 1;
+}
+
+.viewChart {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 512px) {
+    .viewChart {
+        height: 250px;
+    }
+}
+
+.view, .lineChart {
+    width: 100%;
+    height: 10%;
+    opacity: .1;  
+}
+
+.view {
+    height: 100%;
+}
+
+.lineChart {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 912px) {
+    .lineChart {
+        height: 70px;
+    }
+}
+
+.timeLine {
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    height: 150px;
+    border-top: 4px solid #8a8a8a38;
+    border-bottom: 4px solid #8a8a8a38;
+    border-left: 12px solid #8a8a8a38;
+    border-right: 12px solid #8a8a8a38;
+    box-sizing: border-box;
+
+    position: relative;
+    top: -155px;
+    cursor: pointer;
+    border-color:rgba(221, 234, 243, 0.5);
+}
+
+@media screen and (max-width: 912px) {
+    .slider {
+        height: 70px;
+        top: -74px;
+    }
+}
+
+.slider:after {
+    content: '';
+    position: absolute;
+
+    display: block;
+    width: 10000px;
+    height: 107%;
+    background-image: linear-gradient(to left, #2d1dc700 12px, rgba(245, 249, 251, 0.6) 12px, rgba(245, 249, 251, 0.6) 100%);
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: auto;
+}
+
+.slider:before {
+    content: '';
+    position: absolute;
+
+    display: block;
+    width: 10000px;
+    height: 107%;
+    background-image: linear-gradient(to right, #2d1dc700 12px, rgba(245, 249, 251, 0.6) 12px, rgba(245, 249, 251, 0.6) 100%);
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: auto;
+}
+
+.slider-nightTheme{
+    width: 100%;
+    height: 100%;
+    border-color: rgba(64, 86, 106, 0.5);
+}
+
+.slider-nightTheme:after {
+    content: '';
+    position: absolute;
+
+    display: block;
+    width: 10000px;
+    height: 107%;
+    background-image: linear-gradient(to left, #2d1dc700 12px, rgba(31, 42, 56, 0.6) 12px, rgba(31, 42, 56, 0.6) 100%);
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-nightTheme:before {
+    content: '';
+    position: absolute;
+
+    display: block;
+    width: 10000px;
+    height: 107%;
+    background-image: linear-gradient(to right, #2d1dc700 12px, rgba(31, 42, 56, 0.6) 12px, rgba(31, 42, 56, 0.6) 100%);
+
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.switchLabel {
+    margin: 50px auto;
+    color: #35a8f1;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.switchLabel label {
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 512px) {
+    .switchLabel {
+        margin-bottom: 40px;
+    }
+}
+
+.switcher {
+    display: none;
+}
+
+.tooltip {
+    position: absolute;
+    top: 20px;
+    flex-direction: column;
+    padding: 8px 15px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px 0 #ccc;
+    font-size: 28px;
+    display: none;
+    background: #fff;
+    color: #000;
+}
+
+.tooltip-nightTheme {
+    background: #253241;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.18);
+    color: #fff;
+}
+
+.date {
+    margin-bottom: 5px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+
+    flex-wrap: wrap;
+    max-width: 160px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 512px) {
+    .tooltip {
+        padding: 8px 10px;
+        font-size: 21px;
+    }
+
+    .date {
+        font-size: 19px;
+    }
+
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.checkboxes label {
+    padding: 3px 5px;
+    border: 1px solid #7c889470;
+    flex-direction: row;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 13px;
+    margin-right: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.checkboxes div {
+    border: 1px solid #34455678;
+    border-radius: 50%;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.checkbox:checked + .custom-checkbox {
+    background-image: url('./image/check.svg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.followers {
+    top: 13px;
+    left: 15px;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 2px 13px;
+}
+
+@media screen and (max-width: 512px) {
+    .followers {
+        font-size: 19px;
+        margin: 1px 5px;
+    }
+}
+
+/*preloader*/
+.loadWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #fff;
+}
+
+.preloader {
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.preloader div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #cef;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.preloader div:nth-child(1) {
+    left: 6px;
+    animation: preloader1 0.6s infinite;
+}
+.preloader div:nth-child(2) {
+    left: 6px;
+    animation: preloader2 0.6s infinite;
+}
+.preloader div:nth-child(3) {
+    left: 26px;
+    animation: preloader2 0.6s infinite;
+}
+.preloader div:nth-child(4) {
+    left: 45px;
+    animation: preloader3 0.6s infinite;
+}
+@keyframes preloader1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes preloader3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes preloader2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(19px, 0);
+    }
+}
