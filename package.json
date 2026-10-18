@@ -1,27 +1,25 @@
 {
   "name": "charts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Canvas line charts with a range slider and night mode (Telegram chart contest entry)",
+  "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode=production"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Maksim Kunaev",
+  "license": "MIT",
   "dependencies": {
+    "firebase": "^9.5.0"
+  },
+  "devDependencies": {
     "copy-webpack-plugin": "^6.4.1",
-    "firebase": "^9.5.0",
+    "html-webpack-plugin": "^4.5.2",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
-  },
-  "devDependencies": {
-    "css-loader": "^6.5.1",
-    "html-webpack-plugin": "^4.5.2",
-    "style-loader": "^3.3.1",
-    "webpack-cli": "^3.2.3"
   }
 }

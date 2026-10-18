@@ -4,7 +4,7 @@ const utils = require('./utils');
 const createTemplate = utils.createTemplate;
 const createCheckbox = utils.createCheckbox;
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue} from "firebase/database";;
+import { getDatabase, ref, onValue} from "firebase/database";
 
 class Card {
   template = {};
@@ -111,7 +111,7 @@ class Card {
     const { checked } = target;
     const theme = checked ? 'night' : 'day';
 
-    this.switchTheme();
+    this.switchTheme(theme);
   };
 
   switchTheme(mode) {
@@ -166,7 +166,7 @@ class Card {
         config[idx].isVisible = checked;
         customCheckbox.style.backgroundColor = checked ? color : 'transparent';
         shortChart.renderChart({
-          isVisible = config,
+          isVisible: config,
         });
       };
 
