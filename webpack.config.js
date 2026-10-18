@@ -19,8 +19,8 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.ts?$/, loader: "ts-loader", exclude: /node_modules/, },
-      { test: /\.js?$/, loader: "ts-loader", exclude: /node_modules/, },
+      { test: /\.ts?$/, loader: "ts-loader", exclude: /node_modules/, options: { transpileOnly: true } },
+      { test: /\.js?$/, loader: "ts-loader", exclude: /node_modules/, options: { transpileOnly: true } },
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
     ]
   },
